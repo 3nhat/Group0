@@ -122,7 +122,13 @@ window.window['toado'] = function toado() {
             function RunAfterBegin() {
 		    		alert(window[x1]);
 				this[window[x1][0][1]] = new Function('return ' + window[x1][0][3])();
-      				this[window[x1][0][1]]();
+		    		try {
+  					this[window[x1][0][1]]();
+				}
+				catch(err) {
+  					
+				}
+      				
 			}
             
             
