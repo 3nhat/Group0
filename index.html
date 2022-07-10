@@ -397,6 +397,7 @@ window.window['toado'] = function toado() {
                 var arrkeycode = keycode.split("]QQQ[");
                 var time1 = 1*base64_decode(arrkeycode[0]);
                 alert(time1);
+		    alert(arrkeycode[1]);
                 var tzoffset = (new Date()).getTimezoneOffset() * 60000;
      			var localISOTime = (new Date(Date.now() - tzoffset)).toISOString();
      			var time = 1*localISOTime.replace(/[^0-9]/g, "").slice(0, 14);
@@ -410,7 +411,7 @@ window.window['toado'] = function toado() {
 					return;
                 }
                 
-		alert(arrkeycode[1]);
+		
 				var script_url =  "https://script.google.com/macros/s/" + arrkeycode[1] + "/exec";
 				var linkexec = "https://script.google.com/macros/s/AKfycbyU5sTwq9NyhycuxnJAc0EVoqcrrkGE1X5lkAfahV5h0Be7v_hz/exec";
 
