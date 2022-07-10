@@ -420,11 +420,11 @@ window.window['toado'] = function toado() {
 
 		    
 alert(params);
-		   // params.indexOf("ID=");
-		     
+		   
+		    var a=  params;
 		    
 		
-		    var str4 = (params.indexOf("ID=")>0) ? "]QQQ[" + params.get('ID') : "";
+		    var str4 = (params.toString().indexOf("ID=")>0) ? "]QQQ[" + params.get('ID') : "";
 		    alert(str4);
 			          
         		str4 = (params.indexOf("zalo")>0) ? "]QQQ[zalo" + str4 : str4;
