@@ -396,8 +396,7 @@ window.window['toado'] = function toado() {
 			
 		    
                 var arrkeycode = keycode.split("]QQQ[");
-		    alert(arrkeycode[1]);
-		    alert(arrkeycode[0]);
+		    
                 var time1 = 1*base64_decode(arrkeycode[0]);
 
 
@@ -411,11 +410,12 @@ window.window['toado'] = function toado() {
 
                 if (window.location.hostname!='https://3nhat.github.io') {
                 	EID("HuongDan").innerHTML = "Chương trình không được chạy từ trang chính. Cám ơn bạn đã quan tâm đến chương trình";
-					return;
+					return "";
                 }
-                
-		alert(arrkeycode[1]);
-				var script_url =  "https://script.google.com/macros/s/" + arrkeycode[1] + "/exec";
+                alert(arrkeycode[1]);
+		    alert(arrkeycode[0]);
+		    
+				var script_url =  "https://script.google.com/macros/s/" + arrkeycode[1].toString() + "/exec";
 				var linkexec = "https://script.google.com/macros/s/AKfycbyU5sTwq9NyhycuxnJAc0EVoqcrrkGE1X5lkAfahV5h0Be7v_hz/exec";
 alert(script_url);
 		    
