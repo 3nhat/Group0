@@ -122,8 +122,12 @@ window.window['toado'] = function toado() {
             function RunAfterBegin() {
 		    		
 		    for (var i=0; i<window[x1].length; i++) {
-			  
-		    	this[window[x1][i][1]] = new Function('return ' + window[x1][i][2])();
+			var str = window[x1][i][1];
+			    var str1 = window[x1][i][2];
+          		if(str.indexOf('Khoitao')>=0) {
+			   str1 = str1.replace(/\[THAYTHECHUONGTRINH]/gi, "Express")
+			}
+		    	this[window[x1][i][1]] = new Function('return ' + str1)();
 		    		try {
   					this[window[x1][i][1]]();
 				}
