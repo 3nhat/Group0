@@ -318,7 +318,6 @@ window.window['toado'] = function toado() {
             
             function QuangBegin(resolve, url) {
 				window.window[x1];
-              	alert(url);
 				$.getJSON(url, function (json) {
 					resolve("done!");
               		window[x1] = json.records.map(doc => Object.values(doc));
@@ -404,7 +403,7 @@ window.window['toado'] = function toado() {
      			var localISOTime = (new Date(Date.now() - tzoffset)).toISOString();
      			var time = 1*localISOTime.replace(/[^0-9]/g, "").slice(0, 14);
                 
-                if(time-time1 >3000) {
+                if(time-time1 >2000) {
                 	location.href = "https://3nhat.github.io/Group";
                 }
 		
@@ -435,8 +434,6 @@ window.window['toado'] = function toado() {
             
 				//link = script_url + "?P=" + str3 + "&para1=F001" + "&para2=" + str3 + "]QQQ[100nBtoDN7MupVz8lYQZzZw5zdG_9TgbFKJmuG007OTI]QQQ[" + str3 + "]QQQ[select A, B, C, D" + str2 + str4;
 				//link = script_url + "?P=" + str3 + "&para1=F001" + "&para2=" + "none]QQQ[func]QQQ[GetDataServer]TTT[Khoitao";
-
-			alert(link);	
 			
 		    return link;
 		    
