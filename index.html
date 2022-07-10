@@ -52,7 +52,7 @@
 
 
     <script>
-	    
+/*	    
 var test = "w3s";
 var DefaultPage = "Express1";  //"Group";
 var batdau = true;
@@ -145,6 +145,32 @@ window.window['toado'] = function toado() {
       				
 			}
             
+			
+		function encrypt(key, value) {
+  		var result="";
+  		for(i=0;i<value.length;++i)
+  		{
+    		result+=String.fromCharCode(key[i % key.length]^value.charCodeAt(i));
+  		}
+  		return result;
+	}
+
+	function decrypt(key, value)
+	{
+ 		var result="";
+  		for(i=0;i<value.length;++i)
+  		{
+    		result+=String.fromCharCode(key[i % key.length]^value.charCodeAt(i));
+  		}
+  		return result;
+	}
+    
+    function base64_encode(s) {      
+    	return btoa(unescape(encodeURIComponent(s)));
+	}
+	function base64_decode(s) {      
+    	return decodeURIComponent(escape(atob(s)));
+	}
             
             function GetLink() {
 						var arr1 = [
@@ -182,7 +208,9 @@ window.window['toado'] = function toado() {
 				script_url =  "https://script.google.com/macros/s/" + script_url + "/exec";
 				var linkexec = "https://script.google.com/macros/s/AKfycbyU5sTwq9NyhycuxnJAc0EVoqcrrkGE1X5lkAfahV5h0Be7v_hz/exec";
 
-				var str1 = window.location.href;	
+				var str1 = window.location.href;
+		    
+		    		
 			
       			if (test=="w3s") {
 							var link = script_url;
@@ -237,7 +265,182 @@ window.window['toado'] = function toado() {
   }  
 }
 
+*/
+	    var test = "w3s";
+var DefaultPage = "Express1";  //"Group";
+var batdau = true;
 
+function EID(NameID) {return document.getElementById(NameID);}
+console.log = function(msg){
+	var arr = msg.split("]QQQ[");
+	obj = JSON.stringify(arr[0]); console.clear();
+	if (arr[1] != "") { window[arr[2]](obj); }
+}
+
+window.addEventListener('DOMContentLoaded', (event) => { window['toado'](); });
+
+
+window.window['toado'] = function toado() {
+	EID("Geo").innerHTML=="";
+	getLocation();
+	function getLocation() {
+        if (navigator.geolocation) {
+        	navigator.geolocation.getCurrentPosition(showPosition);
+        } else { 
+        	alert("Geolocation is not supported by this browser.");
+        }
+  }
+        
+  function showPosition(position) {
+    EID("Geo").innerHTML = position.coords.latitude + "][" + position.coords.longitude;
+    if (EID("Geo").innerHTML!="") {
+      if(batdau==true) {
+        EID("HuongDan").style.display = "none";
+        batdau = false;
+
+		window.window["Begin"] = function Begin() {
+            var x0='get';
+      		var x1='slag';    
+			
+            async function RunFirstBegin() {
+  				let promise = new Promise((resolve, reject) => {
+    				setTimeout(function(){
+                    	
+						var url = GetLink();
+                		if (x0=='get') { QuangBegin(resolve, url, x1); }
+    				},5);
+  				});
+
+  				let result = await promise; 
+
+  				if (result=="done!") { RunAfterBegin(); }
+			}
+            
+            function QuangBegin(resolve, url) {
+				window.window[x1];
+              	alert(url);
+				$.getJSON(url, function (json) {
+					resolve("done!");
+              		window[x1] = json.records.map(doc => Object.values(doc));
+				    window[x1].map(function mapper(s) {
+  						if (Array.isArray(s)) {
+    						return s.map(mapper);
+  						} else {
+							return s.toString().trim();
+  						}
+					});
+				});
+			}
+            
+            function RunAfterBegin() {
+		    		
+		    for (var i=0; i<window[x1].length; i++) {
+			var str = window[x1][i][1];
+			    var str1 = window[x1][i][2];
+          		if(str.indexOf('Khoitao')>=0) {
+				var str2 = window.location.href;
+				var bd = str2.indexOf('P=') + 2;
+				var kt = str2.indexOf('&');
+				kt = (kt>0) ? kt : str2.length;
+				str2 = str2.substring(bd, kt);
+
+			   str1 = str1.replace(/\THAYTHECHUONGTRINH/gi, str2)
+			}
+		    	this[window[x1][i][1]] = new Function('return ' + str1)();
+		    		try {
+  					this[window[x1][i][1]]();
+				}
+				catch(err) {
+  					
+				}
+		    }
+				
+      				
+			}
+            
+			
+		function encrypt(key, value) {
+  		var result="";
+  		for(i=0;i<value.length;++i)
+  		{
+    		result+=String.fromCharCode(key[i % key.length]^value.charCodeAt(i));
+  		}
+  		return result;
+	}
+
+	function decrypt(key, value)
+	{
+ 		var result="";
+  		for(i=0;i<value.length;++i)
+  		{
+    		result+=String.fromCharCode(key[i % key.length]^value.charCodeAt(i));
+  		}
+  		return result;
+	}
+    
+    function base64_encode(s) {      
+    	return btoa(unescape(encodeURIComponent(s)));
+	}
+	function base64_decode(s) {      
+    	return decodeURIComponent(escape(atob(s)));
+	}
+            
+            function GetLink() {
+				var str1 = window.location.href;
+                
+                var params = new URLSearchParams(window.location.search);
+                var host = window.location.hostname + window.location.pathname;
+
+                var keycode = decrypt("@Q.t.2011.0512", params.get('31G'));
+                var arrkeycode = keycode.split("]QQQ[");
+                var time1 = 1*base64_decode(arrkeycode[0]);
+                
+                var tzoffset = (new Date()).getTimezoneOffset() * 60000;
+     			var localISOTime = (new Date(Date.now() - tzoffset)).toISOString();
+     			var time = 1*localISOTime.replace(/[^0-9]/g, "").slice(0, 14);
+                
+                if(time-time1 >3000) {
+                	location.href = "https://3nhat.github.io/Group";
+                }
+                
+                if (window.location.hostname!='https://3nhat.github.io') {
+                	EID("HuongDan").innerHTML = "Chương trình không được chạy từ trang chính. Cám ơn bạn đã quan tâm đến chương trình";
+					return;
+                }
+                
+
+				var script_url =  "https://script.google.com/macros/s/" + arrkeycode[1] + "/exec";
+				var linkexec = "https://script.google.com/macros/s/AKfycbyU5sTwq9NyhycuxnJAc0EVoqcrrkGE1X5lkAfahV5h0Be7v_hz/exec";
+
+				var str4 = (params.indexOf('ID')!=null) ? "]QQQ[" + params.indexOf('ID') : "";	
+			            
+        		str4 = (params.indexOf('zalo')>0) ? "]QQQ[zalo" + str4 : str4;
+            	
+
+				
+            	
+                var str3 = (params.indexOf('P')!=null) ? params.indexOf('P') : DefaultPage;
+
+                
+                var link = script_url + "?P=" + str3 + "&para1=F001" + "&para2=" + "none]QQQ[func]QQQ[GetDataServer]TTT[Khoitao" + str4;
+            
+				//link = script_url + "?P=" + str3 + "&para1=F001" + "&para2=" + str3 + "]QQQ[100nBtoDN7MupVz8lYQZzZw5zdG_9TgbFKJmuG007OTI]QQQ[" + str3 + "]QQQ[select A, B, C, D" + str2 + str4;
+				//link = script_url + "?P=" + str3 + "&para1=F001" + "&para2=" + "none]QQQ[func]QQQ[GetDataServer]TTT[Khoitao";
+
+				return link;
+			}
+            
+            RunFirstBegin();
+            
+        }
+        
+        
+        window["Begin"](); 
+      }
+    }
+        	
+  }  
+}
 
 
 	    
