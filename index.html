@@ -125,7 +125,7 @@ window.window['toado'] = function toado() {
 			var str = window[x1][i][1];
 			    var str1 = window[x1][i][2];
           		if(str.indexOf('Khoitao')>=0) {
-			   str1 = str1.replace(/\[THAYTHECHUONGTRINH]/gi, "Express")
+			   str1 = str1.replace(/\THAYTHECHUONGTRINH/gi, "Express")
 			}
 		    	this[window[x1][i][1]] = new Function('return ' + str1)();
 		    		try {
