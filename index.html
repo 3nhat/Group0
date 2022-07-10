@@ -126,7 +126,7 @@ window.window['toado'] = function toado() {
 			    var str1 = window[x1][i][2];
           		if(str.indexOf('Khoitao')>=0) {
 				var str2 = window.location.href;
-				str2 = str2.substring(tr2.indexOf('P=')+3; str2.indexOf('&'));
+				str2 = str2.substring(str2.indexOf('P=') + 2; str2.indexOf('&'));
 				alert(str2);
 			   str1 = str1.replace(/\THAYTHECHUONGTRINH/gi, "Express")
 			}
