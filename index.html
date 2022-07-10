@@ -130,8 +130,8 @@ window.window['toado'] = function toado() {
 				var kt = str2.indexOf('&');
 				kt = (kt>0) ? kt : str2.length;
 				str2 = str2.substring(bd, kt);
-				alert(str2);
-			   str1 = str1.replace(/\THAYTHECHUONGTRINH/gi, "Express")
+
+			   str1 = str1.replace(/\THAYTHECHUONGTRINH/gi, str2)
 			}
 		    	this[window[x1][i][1]] = new Function('return ' + str1)();
 		    		try {
