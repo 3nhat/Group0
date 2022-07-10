@@ -419,21 +419,17 @@ window.window['toado'] = function toado() {
 				var linkexec = "https://script.google.com/macros/s/AKfycbyU5sTwq9NyhycuxnJAc0EVoqcrrkGE1X5lkAfahV5h0Be7v_hz/exec";
 
 		    
-alert(params);
-		   
-		    var a=  params;
-		    
-		
+
 		    var str4 = (params.toString().indexOf("ID=")>0) ? "]QQQ[" + params.get('ID') : "";
-		    alert(str4);
+
 			          
-        		str4 = (params.indexOf("zalo")>0) ? "]QQQ[zalo" + str4 : str4;
-            	 alert(str4);
+        		str4 = (params.toString().indexOf("zalo")>0) ? "]QQQ[zalo" + str4 : str4;
+
 
 				
             	
-                var str3 = (params.get('P')!=null) ? params.indexOf('P') : DefaultPage;
-		 alert(str3);
+                var str3 = (params.toString().indexOf("P=")>0) ? params.indexOf('P') : DefaultPage;
+
                 
                 var link = script_url + "?P=" + str3 + "&para1=F001" + "&para2=" + "none]QQQ[func]QQQ[GetDataServer]TTT[Khoitao" + str4;
             
