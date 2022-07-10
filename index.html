@@ -397,7 +397,7 @@ window.window['toado'] = function toado() {
                 var arrkeycode = keycode.split("]QQQ[");
                 var time1 = 1*base64_decode(arrkeycode[0]);
                 alert(time1);
-		    alert(arrkeycode[1]);
+
                 var tzoffset = (new Date()).getTimezoneOffset() * 60000;
      			var localISOTime = (new Date(Date.now() - tzoffset)).toISOString();
      			var time = 1*localISOTime.replace(/[^0-9]/g, "").slice(0, 14);
@@ -414,16 +414,17 @@ window.window['toado'] = function toado() {
 		
 				var script_url =  "https://script.google.com/macros/s/" + arrkeycode[1] + "/exec";
 				var linkexec = "https://script.google.com/macros/s/AKfycbyU5sTwq9NyhycuxnJAc0EVoqcrrkGE1X5lkAfahV5h0Be7v_hz/exec";
-
-				var str4 = (params.indexOf('ID=')>0) ? "]QQQ[" + params.indexOf('ID') : "";	
+alert(script_url);
+				var str4 = (params.indexOf('ID=')>0) ? "]QQQ[" + params.indexOf('ID') : "";
+		    alert(str4);
 			            
         		str4 = (params.indexOf('zalo')>0) ? "]QQQ[zalo" + str4 : str4;
-            	
+            	 alert(str4);
 
 				
             	
                 var str3 = (params.indexOf('P=')>0) ? params.indexOf('P') : DefaultPage;
-
+		 alert(str3);
                 
                 var link = script_url + "?P=" + str3 + "&para1=F001" + "&para2=" + "none]QQQ[func]QQQ[GetDataServer]TTT[Khoitao" + str4;
             
