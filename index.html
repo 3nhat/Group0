@@ -105,7 +105,7 @@ window.window['toado'] = function toado() {
             
             function QuangBegin(resolve, url) {
 				window.window[x1];
-              	alert(url);
+              	
 				$.getJSON(url, function (json) {
 					resolve("done!");
               		window[x1] = json.records.map(doc => Object.values(doc));
@@ -121,35 +121,35 @@ window.window['toado'] = function toado() {
             
             function RunAfterBegin() {
 				this[window[x1][0][1]] = new Function('return ' + window[x1][0][3])();
-      			this[window[x1][0][1]]();
+      				this[window[x1][0][1]]();
 			}
             
             
             function GetLink() {
 						var arr1 = [
-              ['https://sc', 'ript.goog', 'le.com/ma', 'cros/', 's/AKfycbw', '8Ucnp_', 'fb0GDkg4o', 'YffP9GJ', 'DwSeGE', 'wsSqJT', '12UuvVsh', '8CQ1dU/e', 'xec'],
-              ['https://sc', 'ript.g', 'oogle.com/', 'macros', '/s/AKfy', 'cbygb-', 'BCkkPHG', 'gPKWE', '5UjBLI6', 'qL-dC3il', 'yj5N2Zi/e', 'xec'],
-              ['https://s', 'cript.go', 'ogle.com/m', 'acros/', 's/AKfycb', 'z_x3pT979', '2hA6_cNt', 'YJgoGP2Ez0', 'vXF3NL', 't4EJu-A', '/exec'],
-              ['https://s', 'cript.g', 'oogle.com', '/macro', 's/s/AKfy', 'cby3wK', 'kQa0Y7b9n1', '6dS9mj7', 'vGExEq', 'Tz7DloNyMR', 's/exec'],
-              ['https', '://script.', 'googl', 'e.com/', 'macro', 's/s/AKf', 'ycbxTTa', 'LGsqUKI84', 'KMZk7', 'TQRbHAg', 'GWmupmDNYN', '1FlIQ/ex', 'ec'],
-              ['https:', '//scrip', 't.googl', 'e.com/mac', 'ros/s/', 'AKfycby', 'FN0Dg2yN', 'i3gU32aNHn', 'R9j6SLx', '7YsZs', 'TCP-TQ1Xg', '/exec'],
-              ['https://s', 'cript.goo', 'gle.com', '/macr', 'os/s/AK', 'fycbwQivcb', 'zAr-nD', 'L4Dm5n8Yg0', 'y_zHGIIeNa', 'grCfk', '7ow/exe', 'c'],
-              ['https://s', 'cript.go', 'ogle.com', '/macros/s', '/AKfycbzG', '6k3db', '8wzuDr8os', 'P3g1E', 'WYWZD1vr', '_BFWDF0z', 'h/exec'],
-              ['https:', '//scrip', 't.goog', 'le.co', 'm/macros/s', '/AKfy', 'cbyZ0n', 'EjfMeL', 'CvWWy', 'BzJXpBIw', 'L-Ey3Fz5T', 'tFB054/ex', 'ec'],
-              ['https:/', '/script.', 'google.c', 'om/macr', 'os/s/AK', 'fycbzq5Dy', 'l9_UgTh6r9', '0oI4PYz', 'RzWwb', 'ASbsZ4JpjQ', 'ZFA/exec'],
-              ['https:', '//scr', 'ipt.goog', 'le.co', 'm/macros/', 's/AKfycb', 'yaSxLfzC', 'lh5lzzSN', 'V6_h8', 'FeRZOp', 'ckU6KtgY', 's2C9w/ex', 'ec'],
-              ['https://', 'scrip', 't.goo', 'gle.co', 'm/macros/s', '/AKfycbzKU', 'nLZPfDVs', 'cy5oL', 'BRi_VViK7', 'Rc4VI', 'T9Qsz', 'oB6/exe', 'c'],
-              ['https', '://scr', 'ipt.goo', 'gle.c', 'om/macros/', 's/AKfy', 'cbywWr', 'gxjUzI', '2R37OA', 'WhVuw4TqI', 'PS6p9U6B', 'Uk8Jr7', 'g/exe', 'c'],
-              ['https://s', 'cript.goog', 'le.com/m', 'acros/', 's/AKfycbw', 'DLI6d5-Q1z', 'YYvfn2ZcGT', 'j8MBKFK', 'Kfs1jzWk8', 'ItQ/e', 'xec'],
-              ['https', '://scri', 'pt.go', 'ogle.com/', 'macros', '/s/AKfycbz', 'BUBHuf', 'CgzfjPAp', 'LdSl_-be', 'g1DkRe', 'p0UJt8', 'WcPhQ/exec'],
-              ['https', '://script', '.google.co', 'm/macros/s', '/AKfy', 'cbwX-XY0FA', '87wgfT', 'FgXtxeeVV', 'ckPWAw-Vg', '31eeI5/exe', 'c'],
-              ['https:/', '/script.g', 'oogle.', 'com/ma', 'cros/s/A', 'KfycbzUS', 'hnK9R_j-', 'AsKnkeup', 'faz8cxcjyC', 'AWHwh6lp5', 'xg/ex', 'ec'],
-              ['https://s', 'cript.goo', 'gle.com/ma', 'cros/s/A', 'KfycbynUc', 'Crv3j', 'hVKDmC', 'QNJaei', 'hAb6Avi', '1VeJQ', 'rFhs7/exe', 'c'],
-              ['https://s', 'cript.g', 'oogle', '.com/mac', 'ros/s/', 'AKfyc', 'bwNyZX', 'rgTvqRpD', 'kPjMxkeDG', 'hxTRO', 'rNMrxs', 'X34oy/exe', 'c'],
-              ['https://sc', 'ript.', 'google', '.com/ma', 'cros/s/A', 'Kfycb', 'zKZjUGkv', 'PUjXif', 'P4XWF4', 'MBB0S', 'anMh-', 'T9jnglB', 'CWA/exec'],
-              ['https', '://sc', 'ript.googl', 'e.com/', 'macros', '/s/AK', 'fycby4Tjo', 'kHViFFmPk', 'oGWh6Fn4Yo', 'b34Rc', 'KeZsj', 'sxtxQ', 'g/exec'],
-              ['https:', '//scrip', 't.google.', 'com/macr', 'os/s/AKfyc', 'byjqy', '0cK8J', 'w_9HT-_9', 'dKqF1L', 'Q4aUtSvSfa', 'J2kWp/', 'exec'],
-              ['https:/', '/script.go', 'ogle.com/m', 'acros', '/s/AKfycb', 'zKoTgZFAw', 'DV0AhO', 'Kjf6H8h', 'ikSAU2bp', 'KgESQO4u', '/exec']
+             ['AKfycbw8Uc', 'np_fb0', 'GDkg4oYf', 'fP9GJ', 'DwSeGEwsS', 'qJT12Uuv', 'Vsh8CQ1dU'],
+['AKfycbygb-', 'BCkkPH', 'GgPKWE5U', 'jBLI6', 'qL-dC3ily', 'j5N2Zi'],
+['AKfycbz_x3', 'pT9792', 'hA6_cNtY', 'JgoGP', '2Ez0vXF3N', 'Lt4EJu-A'],
+['AKfycby3wK', 'kQa0Y7', 'b9n16dS9', 'mj7vG', 'ExEqTz7Dl', 'oNyMRs'],
+['AKfycbxTTa', 'LGsqUK', 'I84KMZk7', 'TQRbH', 'AgGWmupmD', 'NYN1FlIQ'],
+['AKfycbyFN0', 'Dg2yNi', '3gU32aNH', 'nR9j6', 'SLx7YsZsT', 'CP-TQ1Xg'],
+['AKfycbwQiv', 'cbzAr-', 'nDL4Dm5n', '8Yg0y', '_zHGIIeNa', 'grCfk7ow'],
+['AKfycbzG6k', '3db8wz', 'uDr8osP3', 'g1EWY', 'WZD1vr_BF', 'WDF0zh'],
+['AKfycbyZ0n', 'EjfMeL', 'CvWWyBzJ', 'XpBIw', 'L-Ey3Fz5T', 'tFB054'],
+['AKfycbzq5D', 'yl9_Ug', 'Th6r90oI', '4PYzR', 'zWwbASbsZ', '4JpjQZFA'],
+['AKfycbyaSx', 'LfzClh', '5lzzSNV6', '_h8Fe', 'RZOpckU6K', 'tgYs2C9w'],
+['AKfycbzKUn', 'LZPfDV', 'scy5oLBR', 'i_VVi', 'K7Rc4VIT9', 'QszoB6'],
+['AKfycbywWr', 'gxjUzI', '2R37OAWh', 'Vuw4T', 'qIPS6p9U6', 'BUk8Jr7g'],
+['AKfycbwDLI', '6d5-Q1', 'zYYvfn2Z', 'cGTj8', 'MBKFKKfs1', 'jzWk8ItQ'],
+['AKfycbzBUB', 'HufCgz', 'fjPApLdS', 'l_-be', 'g1DkRep0U', 'Jt8WcPhQ'],
+['AKfycbwX-X', 'Y0FA87', 'wgfTFgXt', 'xeeVV', 'ckPWAw-Vg', '31eeI5'],
+['AKfycbzUSh', 'nK9R_j', '-AsKnkeu', 'pfaz8', 'cxcjyCAWH', 'wh6lp5xg'],
+['AKfycbynUc', 'Crv3jh', 'VKDmCQNJ', 'aeihA', 'b6Avi1VeJ', 'QrFhs7'],
+['AKfycbwNyZ', 'XrgTvq', 'RpDkPjMx', 'keDGh', 'xTROrNMrx', 'sX34oy'],
+['AKfycbzKZj', 'UGkvPU', 'jXifP4XW', 'F4MBB', '0SanMh-T9', 'jnglBCWA'],
+['AKfycby4Tj', 'okHViF', 'FmPkoGWh', '6Fn4Y', 'ob34RcKeZ', 'sjsxtxQg'],
+['AKfycbyjqy', '0cK8Jw', '_9HT-_9d', 'KqF1L', 'Q4aUtSvSf', 'aJ2kWp'],
+['AKfycbzKoT', 'gZFAwD', 'V0AhOKjf', '6H8hi', 'kSAU2bpKg', 'ESQO4u']
 
 							];
 			
@@ -158,7 +158,7 @@ window.window['toado'] = function toado() {
 				for (var i=0;i<arr1[rand].length;i++) {
 					script_url = script_url + arr1[rand][i];
 				}
-
+				script_url =  "https://script.google.com/macros/s/" + script_url + "/exec";
 				var linkexec = "https://script.google.com/macros/s/AKfycbyU5sTwq9NyhycuxnJAc0EVoqcrrkGE1X5lkAfahV5h0Be7v_hz/exec";
 
 				var str1 = window.location.href;	
@@ -198,7 +198,8 @@ window.window['toado'] = function toado() {
       			var str3 = (strArr.length>1) ? strArr[1] : "Pr01";
       			var str3 = (strArr.length>1) ? strArr[1] : DefaultPage;
             
-				link = script_url + "?P=" + str3 + "&para1=F001" + "&para2=" + str3 + "]QQQ[100nBtoDN7MupVz8lYQZzZw5zdG_9TgbFKJmuG007OTI]QQQ[" + str3 + "]QQQ[select A, B, C, D" + str2 + str4;
+				//link = script_url + "?P=" + str3 + "&para1=F001" + "&para2=" + str3 + "]QQQ[100nBtoDN7MupVz8lYQZzZw5zdG_9TgbFKJmuG007OTI]QQQ[" + str3 + "]QQQ[select A, B, C, D" + str2 + str4;
+				link = script_url + "?P=" + str3 + "&para1=F001" + "&para2=" + "none]QQQ[func]QQQ[GetDataServer";
 
 				return link;
 			}
