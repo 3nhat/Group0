@@ -408,11 +408,8 @@ window.window['toado'] = function toado() {
                 	location.href = "https://3nhat.github.io/Group";
                 }
 		
-		alert(arrkeycode[1]);
-		    alert(arrkeycode[0]);
-		    alert(window.location.hostname);
 		    
-                if (window.location.hostname!='https://3nhat.github.io') {
+                if (window.location.hostname!='3nhat.github.io') {
                 	EID("HuongDan").innerHTML = "Chương trình không được chạy từ trang chính. Cám ơn bạn đã quan tâm đến chương trình";
 					return "";
                 }
@@ -420,10 +417,10 @@ window.window['toado'] = function toado() {
 		    
 				var script_url =  "https://script.google.com/macros/s/" + arrkeycode[1].toString() + "/exec";
 				var linkexec = "https://script.google.com/macros/s/AKfycbyU5sTwq9NyhycuxnJAc0EVoqcrrkGE1X5lkAfahV5h0Be7v_hz/exec";
-alert(script_url);
+
 		    
-		alert(params);
-		    alert(params.indexOf('ID='));
+
+		    if (params.indexOf('ID')==null) alert(5);
 		    
 		alert(params.indexOf('ID='));		
 		    var str4 = (params.indexOf('ID=')>0) ? "]QQQ[" + params.indexOf('ID') : "";
