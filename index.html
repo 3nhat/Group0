@@ -45,7 +45,7 @@
         		<div class="loader" onclick="EID('container_loader').style.display = 'none'"></div>
 	  	</div>
     	</div>
-    
+    	<div id='VirtualButton' class='VirtualButton'>31G</div>
     	<div id="Program00" class="Program" style="display: none;"></div>
 
 
@@ -61,8 +61,33 @@ console.log = function(msg){
 	obj = JSON.stringify(arr[0]); console.clear();
 	if (arr[1] != "") { window[arr[2]](obj); }
 }
+	    
+	    history.pushState(null, document.title, location.href);
+    		history.back();
+    		history.forward();
+    		window.onpopstate = function () {
+        	history.go(1);
+    	};
+	
+	window.onbeforeunload = function() {
+        	return "bạn muốn tải lại trang chương trình?";
+    	}
 
-window.addEventListener('DOMContentLoaded', (event) => { window['toado'](); });
+window.addEventListener('DOMContentLoaded', (event) => { 
+	window['toado'](); 
+	var box = EID('VirtualButton');
+	  	box.addEventListener('touchmove', function(e) {
+	    		var touchLocation = e.targetTouches[0];
+
+	    		box.style.left = (touchLocation.pageX - box.offsetWidth/2) + 'px';
+	    		box.style.top = (touchLocation.pageY - box.offsetHeight/2) + 'px';
+	  	})
+
+	  	box.addEventListener('touchend', function(e) {
+	    		var x = parseInt(box.style.left);
+	    		var y = parseInt(box.style.top);
+	  	})
+});
 
 
 window.window['toado'] = function toado() {
