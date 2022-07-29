@@ -8,20 +8,25 @@
 
 
 	<style>
-		/* 
+		:root {
+			--flow-body: hidden;
+		} 
 		html {
 			 background:url(https://3nhat.github.io/Image/vanchuyen.jpg) no-repeat center center fixed;
- background-size:cover;
- -moz-background-size:cover;
- -webkit-background-size:cover;
- -ms-background-size:cover;
- -o-background-size:cover;
+ background-size:contain;
+ -moz-background-size:contain;
+ -webkit-background-size:contain;
+ -ms-background-size:contain;
+ -o-background-size:contain;
 		}
-		*/
+		
+		body{ overflow: var(--flow-body); margin:0; width: 100%; height: 100vh;}
+  body::-webkit-scrollbar { display: none;}
+	body { -ms-overflow-style: none; scrollbar-width: none; }
 		
 		
         
-        #Program00 {width: 100%; height: 100vh; z-index: 101;}
+        #Program00 {width: 100%; height: 100vh; z-index: 98;}
 
 		.HuongDan {
           	z-index: 100;
@@ -31,12 +36,8 @@
           	top: 0; left: 0; 
           	padding-top: 48vh; padding-bottom: 48vh;
           	text-align: center; 
-			/*display: none;*/
-			background: url(https://3nhat.github.io/Image/vanchuyen.jpg);
+			display: none;
 
-  background-repeat:no-repeat;
-  background-position:center;
-  background-size:contain;
         }
 		  	
 
