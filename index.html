@@ -72,8 +72,9 @@ var batdau = true;
 
 function EID(NameID) {return document.getElementById(NameID);}
 	    
-function Func_Ext(event) {
-	return window['Func_Ext_1'](event);
+function Func_Event(event, val) {
+	if (val==1) return window['Func_ExtEvent_' + val](event);
+	if (val==2) window['Func__ExtEvent_' + val](event);
 }
 	    
 console.log = function(msg){
